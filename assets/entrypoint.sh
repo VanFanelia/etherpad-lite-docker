@@ -58,6 +58,8 @@ if [ "$1" = 'node' ]; then
 		ETHERPAD_TITLE="$ETHERPAD_TITLE" \
 		ETHERPAD_PORT="$ETHERPAD_PORT" \
 		ETHERPAD_DB_CHARSET="$ETHERPAD_DB_CHARSET" \
+		ETHERPAD_USER_NAME="$ETHERPAD_USER_NAME" \
+		ETHERPAD_USER_PASSWORD="$ETHERPAD_USER_PASSWORD" \
 		node /settings-generator.js > settings.json
 
 	if [ ! -f APIKEY.txt ]; then

@@ -85,6 +85,8 @@ Must be 20 characters or longer.
 * `ETHERPAD_SESSION_REQUIRED`: Users must have a session to access pads. This
 effectively allows only group pads to be accessed. Defaults to unset (false).
 Adding the key to any non-blank value will most likely trigger this behavior.
+* `ETHERPAD_USER_NAME`: Creates A User with non admin rights. Default is `user`
+* `ETHERPAD_USER_PASSWORD`: The Password for the non admin user
 
 The generated settings.json file will be available as a volume under
 */opt/etherpad-lite/var/*.

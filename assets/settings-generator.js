@@ -26,11 +26,17 @@
 	if ( penv.ETHERPAD_DEFAULT_PAD_TEXT ) {
 		settings['defaultPadText'] = penv.ETHERPAD_DEFAULT_PAD_TEXT;
 	}
+	settings['users'] = {};
 	if ( penv.ETHERPAD_ADMIN_PASSWORD ) {
-		settings['users'] = {};
 		settings['users'][penv.ETHERPAD_ADMIN_USER] = {
 			password: penv.ETHERPAD_ADMIN_PASSWORD,
 			is_admin: true
+		};
+	}
+	if ( penv.ETHERPAD_USER_PASSWORD ) {
+		settings['users'][penv.ETHERPAD_USER_NAME] = {
+			password: penv.ETHERPAD_USER_PASSWORD,
+			is_admin: false
 		};
 	}
 	if ( penv.ETHERPAD_SESSION_REQUIRED ) {
